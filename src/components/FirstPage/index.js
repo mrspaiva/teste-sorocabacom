@@ -1,10 +1,12 @@
-import { Content } from './styles';
+import { App } from './styles';
 import Logo from '../../assets/logo.png';
-import Card from '../../assets/card.svg'
+import Card from '../../assets/card.svg';
+import imagemCard from '../../assets/imagemCard.png'
 
 function FirstPage() {
   return (
-      <Content>
+    <App>
+      <div className="content">
         <article className="navbar">
           <section>
             <img src={Logo} alt="Logo Icon"/>
@@ -13,9 +15,19 @@ function FirstPage() {
         </article>
 
         <section className="card">
-          <img src={Card} alt=""/>
+          <img className="cardBackground" src={Card} alt=""/>
+          <div className="cardTitle">
+            <h2>TRANSISTOR - RED THE SINGER</h2>
+          </div>
+          <img className="cardCharacter" src={imagemCard} alt=""/>
+          <div className="cardContent">
+            <p>
+              "Olha, o que quer que você esteja pensando, me faça um favor, não solte."
+            </p>
+          </div>
         </section>
-      </Content>
+      </div>
+    </App>
   )
 }
 
