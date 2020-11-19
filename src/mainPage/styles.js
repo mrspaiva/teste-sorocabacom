@@ -1,26 +1,27 @@
 import styled from 'styled-components'
-import background from '../../assets/background-1.png'
 
 export const App = styled.div`
+    overflow: hidden;
+
   .content {
-    width: 100vw;
-    height: 115vh;
-    background-image: url(${background});
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-  .content .card {
-    width: 50vw;
+  
+  .content .bg {
+    width: 100vw;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
 
   .navbar {
+    position: absolute;
     width: 100%;
-    height: 3.8rem;
+    height: 4.8rem;
     background-color: #363636;
     display: flex;
     justify-content: center;
@@ -33,7 +34,7 @@ export const App = styled.div`
   }
 
   .navbar img {
-    height: 3.8rem;
+    height: 4.8rem;
   }
 
   .navbar h1 {
@@ -45,6 +46,12 @@ export const App = styled.div`
     font-size: 1.4rem;
     margin-left: 1.6rem;
     margin-top: 2rem;
+  }
+
+  .firstCard {
+    position: absolute;
+    top: 1rem;
+    height: 100%;
   }
 
   .secondContent {
@@ -68,17 +75,49 @@ export const App = styled.div`
     top: -1rem;
     border-radius: 5rem;
     box-shadow: 0px 3px 6px #00000029;
+    cursor: pointer;
   }
 
-  .secondContent .left {
+  .secondContent .downArrow {
+    position: absolute;
     z-index: 1;
-    width: 1rem;
-    height: 1rem;
+    width: 0.8rem;
+    display: flex;
+    justify-content: flex-start;
+    top: 0.8rem;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .secondContent .arrow {
+    width: 90vw; 
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .arrow .left {
+    z-index: 1;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  .arrow .right {
+    z-index: 1;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-self: center;
+    cursor: pointer;
   }
 
   .secondContent .charac {
     position: absolute;
     width: 75vw;
+    max-height: 60vh;
     display: grid;
     grid-row-gap: 8rem;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -104,13 +143,15 @@ export const App = styled.div`
     box-shadow: 0px 0px 6px #0000004D;
     border-radius: 0.4rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .bgc-form section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3rem 6rem;
+    width: 80%
   }
 
   section h1 {
@@ -149,11 +190,19 @@ export const App = styled.div`
     grid-area: nome;
   }
 
+  form .nome:focus {
+    border: 1.5px solid #363636
+  }
+
   form .email {
     font-family: 'Open Sans', sans-serif;
     border: 1px solid #363636;
     padding-left: 1rem;
     grid-area: email;
+  }
+
+  form .email:focus {
+    border: 1.5px solid #363636
   }
 
   form .mensagem {
@@ -165,6 +214,10 @@ export const App = styled.div`
     padding-left: 1rem;
     padding-top: 0.8rem;
     grid-area: mensagem;
+  }
+
+  form .mensagem:focus {
+    border: 1.5px solid #363636
   }
 
   form button {
@@ -195,5 +248,17 @@ export const App = styled.div`
     background-color: #FFFFFF;
     margin-right: 4rem;
     margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .swipe .up {
+    position: absolute;
+    width: 2.5rem;
+    cursor: pointer;
+  }
+
+  
 `

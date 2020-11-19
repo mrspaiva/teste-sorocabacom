@@ -9,22 +9,22 @@ import Pena4 from '../../assets/pena4.png';
 function FirstCard() {
   return(
     <App>
-       <section className="card">
           <img className="cardBackground" src={Card} alt=""/>
-          <div className="cardTitle">
-            <h2>TRANSISTOR - RED THE SINGER</h2>
-          </div>
-          <img className="cardCharacter" src={imagemCard} alt=""/>
-          <img className="pena1" src={Pena1} alt=""/>
-          <img className="pena2" src={Pena2} alt=""/>
-          <img className="pena3" src={Pena3} alt=""/>
-          <img className="pena4" src={Pena4} alt=""/>
-          <div className="cardContent">
-            <p>
-              "Olha, o que quer que você esteja pensando, me faça um favor, não solte."
-            </p>
-          </div>
-        </section>
+          <section className="card">
+            <div className="cardTitle">
+              <h2>TRANSISTOR - RED THE SINGER</h2>
+            </div>
+            <img className="cardCharacter" src={imagemCard} alt=""/>
+            <img className="pena1" src={Pena1} alt=""/>
+            <img className="pena2" src={Pena2} alt=""/>
+            <img className="pena3" src={Pena3} alt=""/>
+            <img className="pena4" src={Pena4} alt=""/>
+            <div className="cardContent">
+              <p>
+                "Olha, o que quer que você esteja pensando, me faça um favor, não solte."
+              </p>
+            </div>
+          </section>
     </App>
   )
 }
