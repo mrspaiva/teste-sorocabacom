@@ -1,7 +1,12 @@
 import { App } from './styles';
 import Logo from '../../assets/logo.png';
-import Card from '../../assets/card.svg';
-import imagemCard from '../../assets/imagemCard.png'
+import FirstCard from '../FirstCard';
+import Grant from '../Grant';
+import Red from '../Red';
+import Sybil from '../Sybil';
+import Right from '../../assets/rightArrow.svg';
+import Left from '../../assets/leftArrow.svg';
+
 
 function FirstPage() {
   return (
@@ -14,20 +19,41 @@ function FirstPage() {
           </section>
         </article>
 
-        <section className="card">
-          <img className="cardBackground" src={Card} alt=""/>
-          <div className="cardTitle">
-            <h2>TRANSISTOR - RED THE SINGER</h2>
-          </div>
-          <img className="cardCharacter" src={imagemCard} alt=""/>
-          <div className="cardContent">
-            <p>
-              "Olha, o que quer que você esteja pensando, me faça um favor, não solte."
-            </p>
-          </div>
-        </section>
+       <div className="card">
+         <FirstCard />
+       </div>
       </div>
+
+      <div className="secondContent">
+        <div className="down"></div>
+        <div className="charac">
+          <Grant />
+          <Red />
+          <Sybil />
+        </div>
+      </div>
+
+      <div className="thirdContent">
+        <div className="bgc-form">
+          <section>
+            <h1>FORMULÁRIO</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <form>
+              <input className="nome" type="text" placeholder="Nome"/>
+              <input className="email" type="text" placeholder="Email"/>
+              <textarea className="mensagem" type="text" placeholder="Mensagem"/>
+              <button type="submit">enviar</button>
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <footer>
+        <div className="swipe"></div>
+      </footer>
     </App>
+
   )
 }
 

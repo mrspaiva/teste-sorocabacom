@@ -1,5 +1,5 @@
-import FirstPage from './components/FirstPage';
 import { GlobalStyle } from './global'
+import FirstPage from './components/FirstPage';
 
 function App() {
   return (
